@@ -33,7 +33,7 @@ int main(int ac, char **av)
 		line = split_line(lineptr);
 		result = check_instruction(line[0]);
 		value = line[1];
-		if (result == NULL)
+		if (*result == NULL)
 		{
 			dprintf(2, "L%ld: unknown instruction %s\n", line_number, lineptr);
 			exit(EXIT_FAILURE);
