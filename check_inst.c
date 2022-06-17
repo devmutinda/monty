@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 /**
  * check_instruction - checks if command is valid
  * @s: instruction

@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 /**
  * split_line - splits string into words
  * @line: string
