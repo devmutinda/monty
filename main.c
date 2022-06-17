@@ -39,8 +39,10 @@ int main(int ac, char **av)
 			exit(EXIT_FAILURE);
 		}
 		result(&stack, line_number);
+		free(line);
 		line_number++;
 	}
+	free_stack(stack);
 
 	return (0);
 }
