@@ -16,7 +16,11 @@ void (*check_instruction(char *s))(stack_t**, unsigned int)
 		{NULL, NULL}
 	};
 
-	while (strcmp(ops[i].opcode, s) && ops[i].opcode != NULL)
+	while (ops[i].opcode)
+	{
+		if (!strcmp(ops[i].opcode, s))
+			return (ops[i].f);
 		i++;
-	return (ops[i].f);
+	}
+	return (NULL);
 }
