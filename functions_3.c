@@ -53,3 +53,25 @@ void op_pchar(stack_t **stack, unsigned int line_number)
 	}
 	printf("%c\n", ptr->n);
 }
+/**
+ * op_pstr - prints the string from linked list
+ * @stack: pointer to the head node pointer
+ * @line_number: the line number
+ * Return: void
+ */
+void op_pstr(stack_t **stack, unsigned int line_number)
+{
+	stack_t *ptr = *stack;
+
+	(void)line_number;
+	while (ptr)
+	{
+		if (ptr->n == 0 || (ptr->n < 0 || ptr->n > 127))
+		{
+			printf("\n");
+			break;
+		}
+		printf("%c", ptr->n);
+		ptr = ptr->next;
+	}
+}
