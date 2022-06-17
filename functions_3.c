@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * op_mod - multiplies the second top element of the stack with the top
+ * op_mod - computes the rest of the division
  * @stack: pointer to the head node pointer
  * @line_number: the line number
  * Return: void
@@ -31,4 +31,25 @@ void op_mod(stack_t **stack, unsigned int line_number)
 	(*stack)->prev = NULL;
 	free(ptr);
 }
+/**
+ * op_pchar - prints the char at the top of the stack,
+ * @stack: pointer to the head node pointer
+ * @line_number: the line number
+ * Return: void
+ */
+void op_pchar(stack_t **stack, unsigned int line_number)
+{
+	stack_t *ptr = *stack;
 
+	if (ptr == NULL)
+	{
+		dprintf(2, "L%d: can't pchar, stack empty\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	if (ptr->n < 0 || ptr->n > 127)
+	{
+		dprintf(2, "L%d: can't pchar, value out of range\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	printf("%c\n", ptr->n);
+}
