@@ -72,6 +72,8 @@ void op_pstr(stack_t **stack, unsigned int line_number)
 			break;
 		}
 		printf("%c", ptr->n);
+		if (ptr->next == NULL)
+			printf("\n");
 		ptr = ptr->next;
 	}
 }
