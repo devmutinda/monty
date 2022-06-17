@@ -90,3 +90,27 @@ void op_nop(stack_t **stack, unsigned int line_number)
 	(void)stack;
 	(void)line_number;
 }
+/**
+ *op_pop - does nothing
+ *@stack: pointer to the head node pointer
+ *@line_number: the line number
+ *Return: void
+ */
+void op_pop(stack_t **stack, unsigned int line_number)
+{
+	stack_t *temp = *stack;
+	(void)line_number;
+
+	if (temp->next == NULL)
+	{
+		free(temp);
+		*stack = NULL;
+	}
+	else
+	{
+		*stack = temp->next;
+		(*stack)->prev = NULL;
+		free(temp);
+	}
+}
+
