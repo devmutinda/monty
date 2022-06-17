@@ -51,4 +51,5 @@ void op_swap(stack_t **stack, unsigned int line_number);
 void free_stack(stack_t *head);
 void op_swap(stack_t **stack, unsigned int line_number);
 int _atoi(char *s);
+void op_add(stack_t **stack, unsigned int line_number);
 #endif
