@@ -10,10 +10,11 @@ void (*check_instruction(char *s))(stack_t**, unsigned int)
 	instruction_t ops[] = {
 		{"push", op_push},
 		{"pall", op_pall},
-		{"pint", op_pint},/*To include pop, swap, add fcns*/
+		{"pint", op_pint},
 		{"nop", op_nop},
 		{"pop", op_pop},
 		{"swap", op_swap},
+		{"add", op_add},
 		{NULL, NULL}
 	};
 
