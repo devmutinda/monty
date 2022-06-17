@@ -31,6 +31,9 @@ int main(int ac, char **av)
 		length = strlen(lineptr);
 		lineptr[length - 1] = '\0';
 		line = split_line(lineptr);
+		if (*line == NULL || lineptr[0] == '\n')
+			continue;
+
 		result = check_instruction(line[0]);
 		value = line[1];
 		if (*result == NULL)
@@ -39,7 +42,6 @@ int main(int ac, char **av)
 			exit(EXIT_FAILURE);
 		}
 		result(&stack, line_number);
-		free(line);
 		line_number++;
 	}
 	free_stack(stack);
