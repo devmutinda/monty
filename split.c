@@ -10,7 +10,7 @@ char **split_line(char *line)
 	int j;
 
 	token = malloc(sizeof(char *) * 3);
-	for (j = 0, string = line; ; j++, string = NULL)
+	for (j = 0, string = line; j < 3; j++, string = NULL)
 	{
 		token[j] = strtok(string, " ");
 		if (token[j] == NULL)
