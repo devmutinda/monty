@@ -31,7 +31,7 @@ int main(int ac, char **av)
 		length = strlen(lineptr);
 		lineptr[length - 1] = '\0';
 		line = split_line(lineptr);
-		if (*line == NULL || lineptr[0] == '\n')
+		if (*line == NULL || lineptr[0] == '\n' || lineptr[0] == '#')
 			continue;
 
 		result = check_instruction(line[0]);
