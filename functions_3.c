@@ -51,7 +51,8 @@ void op_pchar(stack_t **stack, unsigned int line_number)
 		dprintf(2, "L%d: can't pchar, value out of range\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-	printf("%c\n", ptr->n);
+	putchar(ptr->n);
+	putchar('\n');
 }
 /**
  * op_pstr - prints the string from linked list
@@ -69,8 +70,8 @@ void op_pstr(stack_t **stack, unsigned int line_number)
 		if (ptr->n == 0 || (ptr->n < 0 || ptr->n > 127))
 			break;
 
-		printf("%c", ptr->n);
+		putchar(ptr->n);
 		ptr = ptr->next;
 	}
-	printf("\n");
+	putchar('\n');
 }
