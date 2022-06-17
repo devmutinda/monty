@@ -13,6 +13,7 @@ void (*check_instruction(char *s))(stack_t**, unsigned int)
 		{"pint", op_pint},/*To include pop, swap, add fcns*/
 		{"nop", op_nop},
 		{"pop", op_pop},
+		{"swap", op_swap},
 		{NULL, NULL}
 	};
 
