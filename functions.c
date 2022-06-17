@@ -99,8 +99,12 @@ void op_nop(stack_t **stack, unsigned int line_number)
 void op_pop(stack_t **stack, unsigned int line_number)
 {
 	stack_t *temp = *stack;
-	(void)line_number;
 
+	if (temp == NULL)
+	{
+		dprintf(2, "L%d: can't pop an empty stack\n", line_number);
+		exit(EXIT_FAILURE);
+	}
 	if (temp->next == NULL)
 	{
 		free(temp);
