@@ -67,13 +67,10 @@ void op_pstr(stack_t **stack, unsigned int line_number)
 	while (ptr)
 	{
 		if (ptr->n == 0 || (ptr->n < 0 || ptr->n > 127))
-		{
-			printf("\n");
 			break;
-		}
+
 		printf("%c", ptr->n);
-		if (ptr->next == NULL)
-			printf("\n");
 		ptr = ptr->next;
 	}
+	printf("\n");
 }
