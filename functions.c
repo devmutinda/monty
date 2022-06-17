@@ -79,3 +79,17 @@ void op_pint(stack_t **stack, unsigned int line_number)
 	temp = *stack;
 	printf("%d\n", temp->n);
 }
+/**
+ *op_nop - does nothing
+ *@stack: pointer to the head node pointer
+ *@line_number: the line number
+ *Return: void
+ */
+void op_nop(stack_t **stack, unsigned int line_number)
+{
+        (void)stack;
+        (void)line_number;
+
+        return;
+}
+
