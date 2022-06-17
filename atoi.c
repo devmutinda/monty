@@ -16,7 +16,7 @@ int _atoi(char *s)
 		if (s[i] == '-')
 			mult *= -1;
 		else if (s[i] < '0' || s[i] > '9')
-			return (0);
+			return (-1);
 
 		res = res * fact;
 		new = s[i] - 48;
