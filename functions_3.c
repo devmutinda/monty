@@ -75,3 +75,14 @@ void op_pstr(stack_t **stack, unsigned int line_number)
 	}
 	putchar('\n');
 }
+/**
+ * op_comment - handles comments
+ * @stack: pointer to the head node pointer
+ * @line_number: the line number
+ * Return: void
+ */
+void op_comment(stack_t **stack, unsigned int line_number)
+{
+	(void)stack;
+	(void)line_number;
+}
