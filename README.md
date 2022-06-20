@@ -52,6 +52,4 @@ The contents of the monty file are shown below:\
 ![image](https://user-images.githubusercontent.com/96857630/174582391-8b8142cb-bfbf-4a54-a9a9-db340ac8336d.png)
 
 
-## Authors
-David Kyalo
  
