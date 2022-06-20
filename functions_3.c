@@ -95,24 +95,17 @@ void op_comment(stack_t **stack, unsigned int line_number)
 void op_rotl(stack_t **stack, unsigned int line_number)
 {
 	stack_t *ptr = *stack, *hld;
-	int count = 0;
 
 	(void)line_number;
-	if (ptr)
+	if (ptr && ptr->next)
 	{
-	hld = ptr;
-	*stack = (*stack)->next;
-	while (ptr->next)
-	{
-		ptr = ptr->next;
-		count++;
-	}
-	if (count != 0)
-	{
+		hld = ptr;
+		*stack = (*stack)->next;
+		while (ptr->next)
+			ptr = ptr->next;
 		ptr->next = hld;
 		hld->prev = ptr;
 		hld->next = NULL;
 		(*stack)->prev = NULL;
-	}
 	}
 }
