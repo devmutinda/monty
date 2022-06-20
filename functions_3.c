@@ -95,15 +95,26 @@ void op_comment(stack_t **stack, unsigned int line_number)
 void op_rotl(stack_t **stack, unsigned int line_number)
 {
 	stack_t *ptr = *stack, *hld;
+	int count = 0;
 
-	(void)line_number;
+	if (ptr == NULL)
+	{
+		dprintf(2, "L%d: can't rotl, stack empty\n", line_number);
+		exit(EXIT_FAILURE);
+	}
 	hld = ptr;
 	*stack = (*stack)->next;
 	while (ptr->next)
+	{
 		ptr = ptr->next;
+		count++;
+	}
+	if (count == 0)
+	{
+		exit(EXIT_FAILURE);
+	}
 	ptr->next = hld;
 	hld->prev = ptr;
 	hld->next = NULL;
 	(*stack)->prev = NULL;
 }
-
