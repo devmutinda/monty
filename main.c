@@ -1,5 +1,36 @@
 #include "monty.h"
 /**
+ * check_arguments - checks if arguments are enough
+ * @ac: argument count
+ * Return: void
+ */
+void check_arguments(int ac)
+{
+	if (ac != 2)
+	{
+		dprintf(2, "USAGE: monty file\n");
+		exit(EXIT_FAILURE);
+	}
+}
+/**
+ * open_file - opens monty file
+ * @av: argument vector
+ * Return: file stream
+ */
+FILE *open_file(char **av)
+{
+	FILE *fd;
+
+	fd = fopen(av[1], "r");
+	if (fd == NULL)
+	{
+		dprintf(2, "Error: Can't open file %s\n", av[1]);
+		exit(EXIT_FAILURE);
+	}
+
+	return (fd);
+}
+/**
  * main - entry point
  * @ac: argument count
  * @av: argument vector
@@ -14,17 +45,9 @@ int main(int ac, char **av)
 	int length;
 	void (*result)(stack_t**, unsigned int);
 
-	if (ac != 2)
-	{
-		dprintf(2, "USAGE: monty file\n");
-		exit(EXIT_FAILURE);
-	}
-	fd = fopen(av[1], "r");
-	if (fd == NULL)
-	{
-		dprintf(2, "Error: Can't open file %s\n", av[1]);
-		exit(EXIT_FAILURE);
-	}
+	check_arguments(ac);
+	fd = open_file(av);
+
 	while ((getline(&lineptr, &n, fd)) != -1)
 	{
 		length = strlen(lineptr);
