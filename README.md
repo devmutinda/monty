@@ -42,12 +42,12 @@ Once the monty program is compiled, it's executed on the terminal as shown below
 `./monty <filename>`
 
 ### Sample output
-The contents of the monty file are shown below/
+The contents of the monty file are shown below:\
 \
  ![image](https://user-images.githubusercontent.com/96857630/174581714-aeb037a4-06f4-417c-bf17-476a573bff30.png)
 \
 \
- On the image below, the dotted lines have been used to separate the `pall` opcode output results\
+ The dotted lines from the image below have been used to separate the `pall` opcode output results\
  \
 ![image](https://user-images.githubusercontent.com/96857630/174582391-8b8142cb-bfbf-4a54-a9a9-db340ac8336d.png)
 
