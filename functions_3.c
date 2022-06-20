@@ -86,3 +86,24 @@ void op_comment(stack_t **stack, unsigned int line_number)
 	(void)stack;
 	(void)line_number;
 }
+/**
+ * op_rotl - rotates stack to the top
+ * @stack: pointer to the head node pointer
+ * @line_number: the line number
+ * Return: void
+ */
+void op_rotl(stack_t **stack, unsigned int line_number)
+{
+	stack_t *ptr = *stack, *hld;
+
+	(void)line_number;
+	hld = ptr;
+	*stack = (*stack)->next;
+	while (ptr->next)
+		ptr = ptr->next;
+	ptr->next = hld;
+	hld->prev = ptr;
+	hld->next = NULL;
+	(*stack)->prev = NULL;
+}
+
