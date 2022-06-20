@@ -32,7 +32,10 @@ int main(int ac, char **av)
 		lineptr[length - 1] = '\0';
 		line = split_line(lineptr);
 		if (*line == NULL || lineptr[0] == '\n' || lineptr[0] == '#')
+		{
+			line_number++;
 			continue;
+		}
 
 		result = check_instruction(line[0]);
 		value = line[1];
