@@ -47,6 +47,7 @@ int main(int ac, char **av)
 
 	check_arguments(ac);
 	fd = open_file(av);
+	status_stack = 1;
 
 	while ((getline(&lineptr, &n, fd)) != -1)
 	{
