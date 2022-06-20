@@ -19,7 +19,6 @@ int main(int ac, char **av)
 		dprintf(2, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-
 	fd = fopen(av[1], "r");
 	if (fd == NULL)
 	{
@@ -36,7 +35,6 @@ int main(int ac, char **av)
 			line_number++;
 			continue;
 		}
-
 		result = check_instruction(line[0]);
 		value = line[1];
 		if (*result == NULL)
@@ -48,6 +46,5 @@ int main(int ac, char **av)
 		line_number++;
 	}
 	free_stack(stack);
-
 	return (0);
 }
