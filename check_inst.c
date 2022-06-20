@@ -24,6 +24,8 @@ void (*check_instruction(char *s))(stack_t**, unsigned int)
 		{"#", op_comment},
 		{"rotl", op_rotl},
 		{"rotr", op_rotr},
+		{"stack", op_stack},
+		{"queue", op_queue},
 		{NULL, NULL}
 	};
 
