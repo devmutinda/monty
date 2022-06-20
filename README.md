@@ -40,6 +40,7 @@ Once the monty program is compiled, it's executed on the terminal as shown below
 `./monty <filename>`
 
 ### Sample output
+![image](https://user-images.githubusercontent.com/96857630/174580818-ea4f6ad7-bcec-4056-9437-503c54835153.png)
 
 ## Authors
 David Kyalo
