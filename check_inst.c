@@ -23,6 +23,7 @@ void (*check_instruction(char *s))(stack_t**, unsigned int)
 		{"pstr", op_pstr},
 		{"#", op_comment},
 		{"rotl", op_rotl},
+		{"rotr", op_rotr},
 		{NULL, NULL}
 	};
 
