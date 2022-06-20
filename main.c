@@ -32,6 +32,7 @@ int main(int ac, char **av)
 		line = split_line(lineptr);
 		if (*line == NULL || lineptr[0] == '\n' || lineptr[0] == '#')
 		{
+			free(line);
 			line_number++;
 			continue;
 		}
