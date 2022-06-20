@@ -40,6 +40,7 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 char *value;
+int status_stack;
 char **split_line(char *line);
 void (*check_instruction(char *s))(stack_t**, unsigned int);
 void op_push(stack_t **stack, unsigned int line_number);
@@ -60,4 +61,6 @@ void op_pstr(stack_t **stack, unsigned int line_number);
 void op_comment(stack_t **stack, unsigned int line_number);
 void op_rotl(stack_t **stack, unsigned int line_number);
 void op_rotr(stack_t **stack, unsigned int line_number);
+void op_stack(stack_t **stack, unsigned int line_number);
+void op_queue(stack_t **stack, unsigned int line_number);
 #endif
