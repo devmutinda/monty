@@ -21,6 +21,7 @@ void (*check_instruction(char *s))(stack_t**, unsigned int)
 		{"mod", op_mod},
 		{"pchar", op_pchar},
 		{"pstr", op_pstr},
+		{"#", op_comment},
 		{NULL, NULL}
 	};
 
