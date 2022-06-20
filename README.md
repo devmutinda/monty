@@ -44,7 +44,8 @@ Once the monty program is compiled, it's executed on the terminal as shown below
 ### Sample output
  ![image](https://user-images.githubusercontent.com/96857630/174581714-aeb037a4-06f4-417c-bf17-476a573bff30.png)
 
-![image](https://user-images.githubusercontent.com/96857630/174581819-396f9712-9400-42a3-900f-1fc7f27fde59.png)
+![image](https://user-images.githubusercontent.com/96857630/174582391-8b8142cb-bfbf-4a54-a9a9-db340ac8336d.png)
+
 
 ## Authors
 David Kyalo
