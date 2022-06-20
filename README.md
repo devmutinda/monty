@@ -34,7 +34,7 @@ Monty byte code files can contain blank lines (empty or made of spaces only, and
 * `queue` - sets the format of the data to a queue (FIFO)
 
 ### Compilation
-The monty program compiled as follows:\
+The monty program is compiled as follows:\
 `gcc -Wall -Werror -Wextra -pedantic -std=c89 *.c -o monty`
 
 ### Usage
